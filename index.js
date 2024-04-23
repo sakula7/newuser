@@ -95,7 +95,7 @@ app.post('/register', async(req, res) => {
     catch (e) 
     {
         console.log(e);
-        res.status(500).send('server error');
+        res.status(500).send(e);
     }
 });
 
@@ -131,7 +131,9 @@ app.post('/login', async(req, res) => {
         res.redirect('/dashboard');
     } catch (error) {
         // console.log("something went wrong, Please try again", error);
-        res.status(500).send('server error');
+        // res.status(500).send('server error');
+        
+        res.status(500).send(e);
     }
 })
 
@@ -168,7 +170,9 @@ app.post('/save', async(req, res) => {
         res.redirect('/dashboard');
     } catch (error) {
         console.log(error);
-        res.status(500).send('server error');
+        // res.status(500).send('server error');
+        
+        res.status(500).send(e);
     }
 })
 
@@ -189,7 +193,9 @@ app.post('/update/:id', async(req, res) => {
 
     } catch (err) {
         console.error(err);
-        res.status(500).send('Server Error');
+        // res.status(500).send('Server Error');
+        
+        res.status(500).send(e);
         
     } 
 });
@@ -207,7 +213,9 @@ app.post('/update/:id/delete', async (req, res) => {
       res.redirect('/dashboard');
     } catch (err) {
       console.error(err);
-      res.status(500).send('Server Error');
+      // res.status(500).send('Server Error');
+        
+        res.status(500).send(e);
     }
   });
 
