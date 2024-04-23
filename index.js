@@ -10,7 +10,7 @@ const todo = require('./schemas/oldUser');
 
 
 const app = express();
-const port = 5550;
+const port = 5500;
 
 
 //DB connection
